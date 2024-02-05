@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Ubuntu:wght@500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box  ;
+    color: white;
+    /* font-family: 'Lato', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body{
+    height: 100vh;
+    width: 100vw;
+    /* overflow: hidden; */
+    /* box-sizing: border-box; */
+}
+
+.main{
+    height: 100vh;
+    width: 100vw;
+}
+
+.nav{
+    height: 14vh;    
+    width: 100vw;
+    padding: 3vw;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    padding: 0 3vw;
+    gap: 3vw;
+    justify-content: flex-start;
+    position: fixed;
+    z-index: 99;
+}
+
+.nav img{
+    height: 4vw;
+    /* margin-top: 1.5vw; */
+    margin-right: -2vw;
+    color: white;
+}
+
+.nav h6{
+    color: white;
+    margin-left: -0.8vw;
+    line-height: 1.4vw;
+    font-size: 1vw;
+}
+
+.nav h4{
+    font-weight: 500;
+}
+
+
+video{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+.cursor{
+    height: 2vh;
+    width: 1vw;
+    background-color: #46516E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+
+.cursor-blur{
+    height: 30vh;
+    width: 15vw;
+    background-color: #505f84;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(100px);
+    z-index: 9;
+}
+
+.content{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+.page1{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+
+}
+
+.page1 h1{
+    font-size: 6svw;
+    font-weight: 800;
+    position: relative;
+    
+}
+
+.page1 h1::before{
+    content: "NO PAIN. NO GAIN";
+    position: absolute;
+    color: black;
+    top: -0.2vw;
+    left: -0.2vw;
+    -webkit-text-stroke: 0.1vw #46516E;
+    z-index: -1;
+}
+
+.page1 h2{
+    font-size: 2vw;
+    font-weight: 700;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+.page1 p{
+    font-size: 1.1vw;
+    font-weight: 400;
+    width: 40vw;
+}
+
+.page2{
+    min-height: 100vh;
+    width: 100vw;
+    z-index: 10;
+}
+
+.scroller{
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.scroller::-webkit-scrollbar{
+    display: none;
+}
+
+.scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.scroller h4{
+    display: inline-block;
+    font-size: 7vw;
+    font-weight: 900;
+    /* font-family: 'Montserrat'; */
+    margin-right: 2vw;
+    transition: all linear 0.5s;
+    color: transparent;
+    -webkit-text-stroke: 2px #46516E;
+
+}
+
+.scroller h4:hover{
+    color: #46516E;
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.about-us{
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    padding: 0 1vw;
+    align-items: center;
+    position: relative;
+    justify-content: space-around;
+    z-index: 0;
+}
+
+.about-us img{
+    height: 20vh;
+    width: 15vw;
+    border-radius: 0.5vw;
+    object-fit: cover;
+    opacity: 2;
+}
+
+.about-us-in{
+    width: 50%;
+    text-align: center;
+}
+
+.about-us-in h3{
+    font-size: 2.5vw;
+    font-weight: 800;
+    margin-bottom: 1.5vw;
+    font-family: 'Montserrat';
+
+}
+
+.about-us-in p{
+    font-size: 1.1vw;
+    line-height: 1.7vw;
+}
+
+.card-container{
+    /* background-color: red; */
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    position: relative;
+    z-index: 10;
+}
+
+.card{
+    height: 50vh;
+    width: 23vw;
+    /* background-color: blue; */
+    border-radius: 1vw;
+    background-size: cover;
+    background-position: -9vw 0vw;
+    overflow: hidden;
+    transition: all ease 0.6s;
+}
+
+#card1{
+    background-image: url(assets/gym3\ \(1\).webp);
+}
+
+
+#card2{
+    background-image: url(assets/gym5.webp);
+}
+
+#card3{
+    background-image: url(assets/gym6\ \(1\).webp);
+}
+
+.overlay{
+    height: 50vh;
+    width: 23vw;
+    background-color: #46516E;
+    padding: 1.5vw;
+    padding-top: 10vw;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+
+.overlay h4{
+    color: black;
+    font-size: 2vw;
+    font-weight: 800;
+    margin-bottom: 1vw;
+}
+
+.overlay p{
+    color: black;
+}
+
+.card:hover .overlay{
+    opacity: 1;;
+}
+
+.card:hover{
+    transform: rotate3d(1,1,0,20deg);
+}
+
+.salmon-div{
+    height: 25vh;
+    width: 100vw;
+    /* background-color: #925B79; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to left bottom, #526087d0, #925b79ad );
+
+}
+
+.salmon-div h4{
+    width: 45vw;
+    font-size: 1.5vw;
+    line-height: 2.5vw;
+    text-align: center;
+    color: black;
+}
+
+.page3{
+    height: 90vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.page3>p{
+    font-size: 2.3vw;
+    font-weight: 600;
+    width: 60vw;
+    text-align: center;
+    line-height: 3vw;
+    font-family: 'ubuntu';
+    text-transform: uppercase;
+}
+
+.page3 img{
+    position: absolute;
+    height: 2.5vw;
+}
+
+.page3 #col1{
+    left: 25vw;
+    top: 15vw;
+    /* background-color: red; */
+    transform: rotateX(20deg);
+
+    
+}
+
+.page3 #col2{
+    bottom: 15vw;
+    right: 25vw;
+    /* background-color: red; */
+}
+
+.page4{
+    height: 30vh;
+    width: 100vw;
+    /* backgsround-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    position: relative;
+}
+
+.elem{
+    height: 20vh;
+    width: 25vw;
+    overflow: hidden;
+    border-radius: 1vw;
+    position: relative;
+}
+
+
+.elem h2{
+    height: 100%;
+    width: 100%;
+    background-color: #46516E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    z-index: 10;
+    font-size: 3vw;
+    font-weight: 800;
+    position: absolute;
+    transition: all ease 0.5s;
+}
+
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* background-position: -9vw 0vw; */
+    scale: 1.2;
+    transition: all ease 0.5s;
+
+}
+
+.elem:hover h2{
+    color: white;
+    background-color: transparent;
+}
+
+.elem:hover img{
+scale: 1;
+}
+
+.page4 h1{
+    font-size: 5vw;
+    position: absolute;
+    color: black;
+    top: -15%;
+    font-weight: 900;
+    -webkit-text-stroke: 0.1vw white;
+}
+
+.footer{
+    height: 40vh;
+    width: 100vw;
+    background: linear-gradient(to left bottom, #526087d0, #925b79ad );
+    margin-top: 3vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10vw;
+    padding: 0 10vw;
+}
+
+.f1{
+    display: flex;
+}
+/* 
+.footer>img{
+    position: absolute;
+    left: 0;
+    height: 100%;
+    z-index: 0;
+} */
+
+.f1 img{
+    height: 8vw;
+    margin-left: -5vw;
+    margin-top: -1vw;
+}
+
+.f1 h6{
+    color: white;
+    margin-left: 0.5vw;
+    line-height: 2.5vw;
+    font-size: 1.5vw;
+    margin-top: 1vw;
+}
+
+.f1,.f2,.f3,.f4{
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+}
+
+.f2 h3{
+    font-size: 1.5vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 800;
+    margin-bottom: 1vw;
+}
+
+.f3 h3{
+    font-size: 1.5vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 800;
+    margin-bottom: 1vw;
+}
+
+.f4 h4{
+    font-size: 1vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+    line-height: 1.3vw;
+    margin-bottom: 1vw;
+}
+
